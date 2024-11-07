@@ -45,10 +45,6 @@ document
 				? (await getBase64(profilePictureFile)).split(",")[1]
 				: null;
 
-		console.log(
-			profilePictureBase64 ? "converted to Base64: 200" : "no image"
-		);
-
 		const imageUrl =
 			(profilePictureBase64 &&
 				(await uploadImage(profilePictureBase64))) ??
@@ -69,9 +65,6 @@ document
 			profilePicture: imageUrl,
 		} as User;
 
-		// delete this line of code
-		console.log("data: ", data);
-
 		const searchParams = new URLSearchParams();
 
 		for (const [key, value] of Object.entries(data)) {
@@ -84,7 +77,5 @@ document
 			window.location.origin
 		}/src/pages/resume.html?${searchParams.toString()}`;
 
-		console.log(resumeLink);
-
-		// window.location.href = resumeLink;
+		window.location.href = resumeLink;
 	});
