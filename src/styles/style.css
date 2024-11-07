@@ -1,0 +1,361 @@
+:root {
+    --blue: #007bff;
+    --dark-blue: #0056b3;
+    --light-black: #333;
+    --cream: #ccc;
+    --white: #fff;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+body,
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling For Form */
+form {
+    max-width: 560px;
+    padding: 20px;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form h1 {
+    font-size: 160%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    color: var(--blue);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+form fieldset {
+    width: 90%;
+    border: 2px solid var(--cream);
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+form fieldset legend {
+    font-size: 120%;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: var(--light-black);
+    background-color: var(--cream);
+}
+
+form fieldset div label {
+    font-weight: bold;
+    color: var(--light-black);
+}
+
+form fieldset div {
+    display: block;
+    margin: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form fieldset div input {
+    border: none;
+    font-size: 110%;
+    border-bottom: 2px solid var(--dark-blue);
+    padding-left: 15px;
+    padding-right: 10px;
+    width: 55%;
+}
+
+form fieldset div div#phone-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+form fieldset div div#phone-container select {
+    position: relative;
+    bottom: -1px;
+    border: none;
+    font-size: 105%;
+    border-bottom: 2px solid var(--dark-blue);
+    width: 20%;
+}
+
+form fieldset div div#phone-container input {
+    width: 70%;
+}
+
+form fieldset div input#profile-picture {
+    border: none;
+    color: var(--dark-blue);
+}
+
+form fieldset div textarea {
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+    font-size: 140%;
+    padding: 10px;
+    width: 55;
+    height: 100px;
+
+    width: 90%;
+    margin-top: 5px;
+    resize: none;
+}
+
+form fieldset div textarea {
+    width: 90%;
+    margin-top: 5px;
+}
+
+form fieldset div textarea:focus,
+form fieldset div input:focus,
+form fieldset div div#phone-container select {
+    outline: none;
+}
+
+div#back {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+div#back a {
+    text-decoration: none;
+    color: var(--light-black);
+    font-weight: 600;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+    word-spacing: 1px;
+}
+
+div#back a span {
+    font-size: 150%;
+    font-weight: 900;
+}
+
+/* Resume Styling */
+div.generated-resume {
+    width: 40rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    line-height: 1.5rem;
+    margin-top: 35px;
+}
+
+h1 {
+    margin: 3px;
+    font-size: 1.3rem;
+}
+
+h1,
+h2 {
+    color: var(--light-black);
+}
+
+h2 {
+    background-color: var(--cream);
+    padding: 6px;
+    border-radius: 2px;
+}
+
+.personal-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+}
+
+section.personal-info figure {
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+section.personal-info figure img {
+    border-radius: 3px;
+    border: 1px solid var(--cream);
+}
+
+.personal-info #contact-details {
+    margin-top: 20px;
+}
+
+section.personal-info #contact-details p {
+    font-size: 1rem;
+    padding: 0 10px;
+    margin: 5px;
+}
+
+section.personal-info #contact-details p a i {
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+section.personal-info #contact-details p a {
+    text-decoration: none;
+    color: var(--light-black);
+    transition: all 0.3s ease;
+}
+
+section.personal-info #contact-details p#number {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+section.personal-info #contact-details p a:hover {
+    color: var(--cream);
+    cursor: pointer;
+}
+
+button {
+    height: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 110%;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+
+form fieldset div.area-container {
+    position: relative;
+    display: block;
+
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+form fieldset div.area-container a.addTextArea {
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: var(--cream);
+    width: max-content;
+    color: var(--white);
+    font-size: 160%;
+    font-weight: 600;
+
+    position: absolute;
+    top: -37px;
+    right: -12px;
+
+    transition: all 0.3s ease;
+}
+
+form fieldset div.area-container a.addTextArea:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+/* Code for shearable link and save as pdf */
+div#shareable-container {
+    position: relative;
+    left: 12.3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button.shearable-buttons {
+    height: 40px;
+    margin-top: 20px;
+    margin: 2px;
+    border-radius: 50px;
+}
+
+button.shearable-buttons:disabled {
+    background-color: #0056b3;
+}
+
+/* Code For Resposiveness */
+
+@media (max-width: 650px) {
+    form fieldset div {
+        flex-direction: column;
+        /* overflow: hidden; */
+    }
+
+    form fieldset div input,
+    form fieldset div div#phone-container {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    form fieldset div div#phone-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    form fieldset div div#phone-container select {
+        width: 20%;
+        margin-top: 5px;
+        /* margin-left: 10px; */
+    }
+
+    div.generated-resume {
+        width: 90vw;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+    section.personal-info {
+        display: block;
+    }
+    section {
+        margin-top: 15px;
+    }
+    img {
+        width: 120px;
+        height: 150px;
+    }
+    figure {
+        margin: 10px auto;
+    }
+
+    div#shareable-container {
+        left: 0;
+    }
+}

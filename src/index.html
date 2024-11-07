@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resume Builder</title>
+        <link rel="stylesheet" href="./styles/style.css" />
+    </head>
+    <body>
+        <main>
+            <form id="resume-form">
+                <h1>Create Your Resume Easily!</h1>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div>
+                        <label for="name">Name: </label
+                        ><input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            data-editable="name"
+                        />
+                    </div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div>
+                        <label for="github">GitHub Profile: </label>
+                        <input
+                            type="url"
+                            id="github"
+                            name="github"
+                            placeholder="https://github.com/yourusername"
+                        />
+                    </div>
+                    <div>
+                        <label for="linkedin">LinkedIn Profile: </label>
+                        <input
+                            type="url"
+                            id="linkedin"
+                            name="linkedin"
+                            placeholder="https://linkedin.com/in/yourusername"
+                        />
+                    </div>
+                    <div>
+                        <label for="phone">Phone: </label>
+                        <div id="phone-container">
+                            <select name="country-code" id="country-code">
+                                <option value="92">+92</option>
+                                <option value="91">+91</option>
+                                <option value="1">+1</option>
+                            </select>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                maxlength="10"
+                                minlength="10"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="profile-picture">Profile Picture: </label>
+                        <input
+                            type="file"
+                            id="profile-picture"
+                            name="profile-picture"
+                            accept="image/*"
+                        />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Education</legend>
+                    <div class="area-container">
+                        <a href="#" class="addTextArea"> + </a>
+                        <label for="education">Enter Your Education:</label>
+                        <textarea
+                            id="education"
+                            name="education"
+                            required
+                            data-editable="education"
+                        ></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Skills</legend>
+                    <div class="area-container">
+                        <label for="skills"
+                            >Enter Your Skills (comma separated):</label
+                        >
+                        <textarea
+                            id="skills"
+                            name="skills"
+                            required
+                            data-editable="skills"
+                        ></textarea>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <div class="area-container">
+                        <a href="#" class="addTextArea"> + </a>
+
+                        <label for="work-experience"
+                            >Enter Your Work Experiences:</label
+                        >
+                        <textarea
+                            id="work-experience"
+                            name="work-experience"
+                            required
+                            data-editable="work-experience"
+                        ></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </main>
+
+        <script src="../dist/bundle.js"></script>
+    </body>
+</html>
